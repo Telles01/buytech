@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class ProfilesController < ApplicationController
   before_action :set_user
   before_action :set_product, only: [:destroy, :edit]
 
@@ -37,6 +37,7 @@ class UsersController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:name, :description) #tenho que trocar isso
+    params.require(:product).permit(:name, :description, :units, :price)
+    # tenho que trocar isso
   end
 end
