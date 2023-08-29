@@ -1,8 +1,42 @@
 class UsersController < ApplicationController
-  validates :name, presence: true, length: { minimum: 2 }
-  validates :suname, presence: true, length: { minimum: 2}
-  validates :address, presence: true
-  validates :city, presence: true
-  validates :phone_number, lenght: { is: 11 }
-  validates :phone_number, presence: true, uniqueness: true
+  before_action :set_user
+  before_action :set_product, only: [:destroy, :edit]
+
+  def index
+    #SHOW USERS AND THEIR PRODUCTS
+  end
+
+  def new
+    @product = @user.products.build
+    #OU
+    @user = Product.new # PERGUNTAR ROBERTO
+  end
+
+  def create
+    @product = @user.products.build(product_params)
+    if @product.save
+      redirect_to user_path(@user), notice: 'Product was successfully created.'
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    @product.destroy
+    redirect_to user_path(@user), notice: 'Product was successfully deleted.'
+  end
+
+  private
+
+  def set_user
+    @user = User.find(params[:user_id])
+  end
+
+  def set_product
+    @product = @user.products.find(params[:id])
+  end
+
+  def product_params
+    params.require(:product).permit(:name, :description) #tenho que trocar isso
+  end
 end
