@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show ]
 
   def index
     @products = Product.all
@@ -12,7 +13,7 @@ class ProductsController < ApplicationController
 
 
   def show
-    #PRECISO?
+    @product = Product.find(params[:id])
   end
 
   def new
@@ -25,7 +26,7 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to product_path(@product), notice: 'Product was successfully created.'
     else
-      render :new
+      render :new, notice: "Sorry. The product couldn't be created."
     end
   end
 
