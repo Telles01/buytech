@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :users do
-    resources :products, only: [:index, :show, :destroy, :edit, :update]
+    resources :products, only: [:index, :new, :create]
   end
+  resources :products, only: [:show, :edit, :update, :destroy]
   resources :orders
 end
