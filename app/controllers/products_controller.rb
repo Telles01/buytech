@@ -5,6 +5,12 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def user
+    @products = current_user.products.all
+  end
+
+
+
   def show
     #PRECISO?
   end
