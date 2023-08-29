@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :products, dependent: :destroy, foreign_key: 'owner_id', class_name: 'Product'
 
   validates :name, presence: true, length: { minimum: 2 }
-  validates :surname, presence: true, length: { minimum: 2}
+  validates :surname, presence: true, length: { minimum: 2 }
   validates :address, presence: true
   validates :city, presence: true
   validates :phone_number, length: { is: 11 }

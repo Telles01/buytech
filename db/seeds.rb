@@ -13,7 +13,7 @@ peter = User.create!({
   surname: "Parker",
   address: "Queens",
   city: "New York",
-  phone_number: 987987432,
+  phone_number: 98798743992,
   email: "spidey@gmail.com",
   password: "123123"
   })
@@ -23,7 +23,7 @@ peter = User.create!({
     surname: "Rogers",
     address: "Brooklyn",
     city: "New York",
-    phone_number: 987987412,
+    phone_number: 99879874128,
     email: "cap@gmail.com",
     password: "123123"
     })
@@ -33,7 +33,7 @@ peter = User.create!({
     surname: "Stark",
     address: "Malibu",
     city: "Los Angeles",
-    phone_number: 987966432,
+    phone_number: 98887966432,
     email: "iamironman@gmail.com",
     password: "123123"
   })
