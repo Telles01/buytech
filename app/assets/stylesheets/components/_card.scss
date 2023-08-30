@@ -1,0 +1,8 @@
+.card-grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.card {
+  box-shadow: 2px 2px 8px #333;
+  background-color: #EED28B;
+}

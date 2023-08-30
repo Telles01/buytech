@@ -1,13 +1,12 @@
-<h1>OS PRODUTOS</h1>
-
-<div class="container">
-<% @products.each do |product| %>
-      <div class="card_product">
-        <h2> <%= link_to product.name, product_path(product) %> </h2>
+<h1 class="padding">Produtos</h1>
+    <div class="card-grid w-100">
+  <% @products.each do |product| %>
+      <div class="card m-2 p-3">
+        <!--img src="..." class="card-img-top" alt="..." -->
+        <h2> <%= link_to product.name, product_path(product), class: "card-title" %> <br><span class="fs-6 text-muted text-decoration-none lh-3"><%= product.units %> unidades disponíveis</span></h2>
         <p> <%= product.description %> </p>
-        <p> <%= product.units %> </p>
-        <h3> R$ <%= product.price %> </h3>
+        <%#link_to "BUY", product_order_confirmation_path(@product), class: "btn btn-primary align-self-start"%>
+        <h5 class="align-self-end"> R$ <%= product.price %> </h5>
       </div>
-      <p>==================================</p>
-    <% end %>
+  <% end %>
 </div>
