@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(order_params)
+    @order = Order.new
     @order.buyer = current_user # Assuming you have a current_user method available
     @product = Product.find(params[:product_id])
     @order.product = @product

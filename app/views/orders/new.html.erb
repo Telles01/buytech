@@ -1,6 +1,5 @@
-
-<div class="m-3">
-<h1>BUY THIS PRODUCT</h1>
+<h1 class="padding">BUY THIS PRODUCT</h1>
+  <div class="card-grid w-100">
   <%# new dentro do show de produtos %>
   <%= simple_form_for [@product, @order] do |f| %>
     <%= f.input :payment, as: :boolean, label: "Payment" %>
