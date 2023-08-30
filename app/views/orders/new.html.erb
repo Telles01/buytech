@@ -1,25 +1,20 @@
+
+<div class="m-3">
 <h1>BUY THIS PRODUCT</h1>
-
-<%# new dentro do show de produtos %>
-
-<%= simple_form_for [@product, @order] do |f| %>
-  <%= f.input :payment, as: :boolean, label: "Payment" %>
-
-  <% if @order.payment == true %>
-    <%= link_to "BUY", product_order_confirmation_path(@product), class: "btn btn-primary" %>
-  <% else %>
-    <p>
+  <%# new dentro do show de produtos %>
+  <%= simple_form_for [@product, @order] do |f| %>
+    <%= f.input :payment, as: :boolean, label: "Payment" %>
     <%= "Hi #{current_user.name}, Check the payment checkbox to proceed with the purchase."%>
-    </p>
-    <%= link_to "BUY", product_order_confirmation_path(@product), class: "btn btn-primary" %>
-   <% end %>
-<% end %>
+   <p>
+   <%= link_to "BUY", product_order_confirmation_path(@product), class: "btn btn-primary"%>
+   </p>
+  <% end %>
+</div>
 
- <%# link_to "BUY", product_order_confirmation_path(@product), class: "btn btn-primary"%>
 
- <%# <%= simple_form_for [@product, @order] do |f| %>
-    <%# <%= f.input :payment, as: :boolean, label: "Payment" %>
-
-    <%# <%= f.button :submit, class: "btn btn-primary", label: "Buy"%>
-    <%# <%= link_to "Back", products_path, class: "btn btn-secondary"%>
-  <%# <% end %>
+<%# simple_form_for [@product, @order] do |f| %>
+    <%# f.input :payment, as: :boolean, label: "Payment" %>
+    <%# "Hi #{current_user.name}, Check the payment checkbox to proceed with the purchase."%>
+    <%# f.button :submit, class: "btn btn-primary", label: "Buy"%>
+    <%# link_to "Back", products_path, class: "btn btn-secondary"%>
+<%# <% end %>
