@@ -8,7 +8,9 @@ class OrdersController < ApplicationController
   def order_confirmation
     # @user = User.find(params[:id])
     @user = current_user
-    redirect_to order_confirmation_path(@user)
+    # raise
+    @product = Product.find(params[:product_id])
+    # redirect_to order_confirmation_path(@product)
   end
 
   def create
@@ -17,7 +19,7 @@ class OrdersController < ApplicationController
     @product = Product.find(params[:product_id])
     @order.product = @product
     if @order.save
-      redirect_to root_path, notice: 'Order was successfully created.'
+      redirect_to product_order_confirmation_path(@product), notice: 'Order was successfully created.'
     else
       render :new
     end

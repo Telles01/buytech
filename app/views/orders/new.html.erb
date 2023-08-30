@@ -2,9 +2,24 @@
 
 <%# new dentro do show de produtos %>
 
-  <%= simple_form_for [@product, @order] do |f| %>
-    <%= f.input :payment, as: :boolean, label: "Payment" %>
+<%= simple_form_for [@product, @order] do |f| %>
+  <%= f.input :payment, as: :boolean, label: "Payment" %>
 
-    <%= f.button :submit, class: "btn btn-primary" %>
-    <%= link_to "Back", products_path, class: "btn btn-secondary" %>
-  <% end %>
+  <% if @order.payment == true %>
+    <%= link_to "BUY", product_order_confirmation_path(@product), class: "btn btn-primary" %>
+  <% else %>
+    <p>
+    <%= "Hi #{current_user.name}, Check the payment checkbox to proceed with the purchase."%>
+    </p>
+    <%= link_to "BUY", product_order_confirmation_path(@product), class: "btn btn-primary" %>
+   <% end %>
+<% end %>
+
+ <%# link_to "BUY", product_order_confirmation_path(@product), class: "btn btn-primary"%>
+
+ <%# <%= simple_form_for [@product, @order] do |f| %>
+    <%# <%= f.input :payment, as: :boolean, label: "Payment" %>
+
+    <%# <%= f.button :submit, class: "btn btn-primary", label: "Buy"%>
+    <%# <%= link_to "Back", products_path, class: "btn btn-secondary"%>
+  <%# <% end %>

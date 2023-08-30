@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   resources :products do
     get "user", on: :collection
     resources :orders, only: [:new, :create]
+    get '/order_confirmation', to: 'orders#order_confirmation', as: :order_confirmation
   end
-
-  get '/orderConfirmation', to: 'orders#order_confirmation'
 end
