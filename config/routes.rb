@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :products do
+    get "user", on: :collection
     resources :orders, only: [:new, :create]
   end
 

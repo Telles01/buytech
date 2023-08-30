@@ -1,0 +1,11 @@
+<h1>user profile product</h1>
+<% @products.each do |product| %>
+  <%= simple_form_for product do |f| %>
+    <%= f.input :name %>
+    <%= f.input :price %>
+    <%= f.input :description %>
+    <%= f.button :submit %>
+  <% end %>
+
+<% end %>
+ <%= link_to 'home', root_path, class: "btn btn-primary" %>
