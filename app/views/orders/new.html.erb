@@ -1,0 +1,10 @@
+<h1>BUY THIS PRODUCT</h1>
+
+<%# new dentro do show de produtos %>
+
+  <%= simple_form_for [@product, @order] do |f| %>
+    <%= f.input :payment, as: :boolean, label: "Payment" %>
+
+    <%= f.button :submit, class: "btn btn-primary" %>
+    <%= link_to "Back", products_path, class: "btn btn-secondary" %>
+  <% end %>

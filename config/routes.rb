@@ -10,4 +10,6 @@ Rails.application.routes.draw do
     get "user", on: :collection
     resources :orders, only: [:new, :create]
   end
+
+ 
 end
