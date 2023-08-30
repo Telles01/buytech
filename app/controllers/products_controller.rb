@@ -10,8 +10,6 @@ class ProductsController < ApplicationController
     @products = current_user.products.all
   end
 
-
-
   def show
     @product = Product.find(params[:id])
   end
