@@ -10,15 +10,15 @@
     </button>
 
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
+      <ul class="navbar-nav me-auto d-flex align-items-center gap-2">
         <% if user_signed_in? %>
           <li class="nav-item active ">
-            <%= link_to "Home", "/", class: "nav-link font" %>
+            <%= link_to "Home", "/", class: "nav-link text-bold" %>
           </li>
           <li class="nav-item btn btn-success rounded-pill btn-sm">
-            <%= button_to "Sell Product", "#", class: "nav-link" %>
+            <%= button_to "Sell Product", "#", class: "nav-link button-bold" %>
           </li>
-
+          
           <li class="nav-item dropdown">
           <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
