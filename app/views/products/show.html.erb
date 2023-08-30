@@ -1,7 +1,9 @@
-<h1><%= @product.name %></h1>
-<div class="card_product">
-        <p> <%= @product.description %> </p>
-        <p> <%= @product.units %> </p>
-        <h3> R$ <%= @product.price %> </h3>
-      </div>
-      <p>==================================</p>
+
+<div class="card-grid w-100">
+  <div class="card m-2 p-3">
+    <h1 class="padding"><%= @product.name %></h1><br><span class="fs-6 text-muted text-decoration-none lh-3"><%= @product.units %> unidades disponíveis</span>
+    <p> <%= @product.description %> </p>
+    <%#link_to "BUY", product_order_confirmation_path(@product), class: "btn btn-primary align-self-start"%>
+    <h5 class="align-self-end"> R$ <%= @product.price %> </h5>
+  </div>
+</div>
