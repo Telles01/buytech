@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
+  <div class="container">
     <%= link_to "/", class: "navbar-brand " do %>
       <%= image_tag "https://www.ourpcb.com/wp-content/uploads/2020/09/0-4.jpg", width: 100, height: 40 %>
       <%="BuyTech" %>
@@ -13,7 +13,7 @@
         class: "form-control",
         placeholder: "Type a keyword" %>
     <div class="input-group-append ">
-      <%= form.button :submit, class: "btn btn-success my-2 my-sm-0 button-bold" do %>
+      <%= form.button :submit, class: "btn bg-blue2 my-2 my-sm-0 button-bold" do %>
         <i class="fas fa-search"></i>
       <% end %>
     </div>
@@ -32,8 +32,8 @@
           <li class="nav-item active ">
             <%= link_to "Home", "/", class: "nav-link text-bold" %>
           </li>
-          <li class="nav-item btn btn-success rounded-pill btn-sm " , style= "padding: 1px">
-            <%= link_to "Sell Product", new_product_path, class: "nav-link button-bold" %>
+          <li class="nav-item btn bg-yellow1 btn-sell" , style= "padding: 1px">
+            <%= link_to "Sell", new_product_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
            <% if current_user.photo.key? %>
