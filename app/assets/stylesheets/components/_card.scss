@@ -1,8 +1,23 @@
 .card-grid {
   display:grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-.card {
-  box-shadow: 2px 2px 8px #333;
-  background-color: #EED28B;
+  grid-template-columns: repeat(3, 1fr);
+
+  .card {
+    box-shadow: 2px 2px 8px #333;
+    background-color: #EED28B;
+    padding: 0;
+
+    .card-header {
+      padding: 0;
+
+      img {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+        margin: 0;
+      }
+    }
+
+
+  }
 }
