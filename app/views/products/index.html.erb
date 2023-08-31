@@ -5,6 +5,8 @@
         <!--img src="..." class="card-img-top" alt="..." -->
         <% if product.photo.present? %>
           <%= cl_image_tag product.photo.key %>
+        <% else %>
+            <%= image_tag("placeholder.png") %>
         <% end %>
         <h2> <%= link_to product.name, product_path(product), class: "card-title" %> <br><span class="fs-6 text-muted text-decoration-none lh-3"><%= product.units %> unidades disponíveis</span></h2>
         <p> <%= product.description %> </p>
