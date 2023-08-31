@@ -1,16 +1,1 @@
-<%= form_with model: @product do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-
-  <%= f.label :units %>
-  <%= f.number_field :units %>
-
-  <%= f.label :price %>
-  <%= f.number_field :price %>
-
-  <%= f.submit %>
-
-<% end %>
+<%= render "form", product: @product %>
