@@ -1,6 +1,9 @@
 .devise-links{
-  a{
+  a {
     text-decoration: none;
+  }
 
+  a:hover {
+    text-decoration: underline;
   }
 }

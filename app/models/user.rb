@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :products, dependent: :destroy, foreign_key: 'owner_id', class_name: 'Product'
-
+  has_one_attached :photo
   validates :name, presence: true, length: { minimum: 2 }
   validates :surname, presence: true, length: { minimum: 2 }
   validates :address, presence: true
