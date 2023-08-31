@@ -4,6 +4,9 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    if params[:query].present?
+      @products = @products.search_products(params[:query])
+    end
   end
 
   def my_products
