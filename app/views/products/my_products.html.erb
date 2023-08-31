@@ -5,6 +5,8 @@
     <div class="card-header">
       <% if product.photo.present? %>
         <%= cl_image_tag product.photo.key  %>
+      <% else %>
+        <%= image_tag("placeholder.png") %>
       <% end %>
     </div>
     <div class="card-body">

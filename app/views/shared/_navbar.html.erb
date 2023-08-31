@@ -7,18 +7,20 @@
     <% end %>
 
     <%= form_with(url: products_path, method: :get, class: "d-flex ") do |form| %>
-  <div class="input-group">
+  <div class="input-group ", style= "width: 450px">
     <%= form.text_field :query,
         value: params[:query],
         class: "form-control",
         placeholder: "Type a keyword" %>
     <div class="input-group-append ">
-      <%= form.button :submit, class: "btn btn-primary rounded-circle" do %>
+      <%= form.button :submit, class: "btn btn-success my-2 my-sm-0 button-bold" do %>
         <i class="fas fa-search"></i>
       <% end %>
     </div>
   </div>
 <% end %>
+
+
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -30,7 +32,7 @@
           <li class="nav-item active ">
             <%= link_to "Home", "/", class: "nav-link text-bold" %>
           </li>
-          <li class="nav-item btn btn-success rounded-pill btn-sm">
+          <li class="nav-item btn btn-success rounded-pill btn-sm " , style= "padding: 1px">
             <%= link_to "Sell Product", new_product_path, class: "nav-link button-bold" %>
           </li>
 
