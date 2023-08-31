@@ -4,9 +4,9 @@
       <div class="card">
         <div class="card-body text-center">
           <p>
-            <h1>Hi <%= @user.name %>,</h1>
-            <h3>Your order has been confirmed!!!</h3>
-            <h2>Thank you!!</h2>
+            <h1>Hi <%= current_user.name %>,</h1>
+            <h3>I think you are traying to buy your own product</h3>
+            <i class="fa-light fa-triangle-exclamation" style="color: #f6d32d;"></i>
           </p>
           <%= link_to "Home Page", root_path, class: "btn btn-primary" %>
         </div>
