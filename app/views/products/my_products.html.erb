@@ -15,8 +15,12 @@
       <h5 class="align-self-end"> R$ <%= product.price %> </h5>
     </div>
 <div class="card-footer">
-    <%= link_to "Delete", product_path(product), data: { turbo_confirm: "Tem certeza que deseja excluir ?", turbo_method: :delete }, class: "btn btn-danger" %>
-    <%= link_to "Update", edit_product_path(product), data: { turbo_confirm: "Tem certeza que deseja atualizar ?" }, class: "btn btn-primary" %>
+    <%= link_to product_path(product), data: { turbo_confirm: "Tem certeza que deseja excluir ?", turbo_method: :delete } do %>
+      <i class="fa-solid fa-circle-xmark"></i>
+    <% end %>
+    <%= link_to edit_product_path(product), data: { turbo_confirm: "Tem certeza que deseja atualizar ?" } do %>
+      <i class="fa-solid fa-pen-to-square"></i>
+    <% end %>
     </div>
     </div>
   <% end %>

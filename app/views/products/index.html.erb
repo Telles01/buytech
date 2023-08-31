@@ -14,8 +14,9 @@
         <h5 class="align-self-end"> R$ <%= product.price %> </h5>
         </div>
         <div class="card-footer">
-        <%= link_to "BUY", product_orders_path(product), data:{turbo_method: :post}, class: "btn btn-primary align-self-start"%>
-
+        <%= link_to product_orders_path(product), data:{turbo_method: :post} do %>
+          <i class="fa-solid fa-cart-shopping"></i>
+        <% end %>
         </div>
       </div>
   <% end %>
