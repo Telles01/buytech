@@ -1,10 +1,23 @@
 <h1>My products</h1>
+<div class="card-grid w-100">
 <% @produts.each do |product| %>
-    <p>Name: <%= product.name %></p>
-    <p>Description: <%= product.description %></p>
-    <p>Units: <%= product.units %></p>
-    <p>Price: $<%= product.price %></p>
-
+<div class="card m-2">
+    <div class="card-header">
+      <% if product.photo.present? %>
+        <%= cl_image_tag product.photo.key  %>
+      <% end %>
+    </div>
+    <div class="card-body">
+      <h2>
+      <%= link_to product.name, product_path(product), class: "card-title" %> <br><span class="fs-6 text-muted text-decoration-none lh-3"><%= product.units %> available</span>
+      </h2>
+      <p>Description: <%= product.description %></p>
+      <h5 class="align-self-end"> R$ <%= product.price %> </h5>
+    </div>
+<div class="card-footer">
     <%= link_to "Delete", product_path(product), data: { turbo_confirm: "Tem certeza que deseja excluir ?", turbo_method: :delete }, class: "btn btn-danger" %>
     <%= link_to "Update", edit_product_path(product), data: { turbo_confirm: "Tem certeza que deseja atualizar ?" }, class: "btn btn-primary" %>
+    </div>
+    </div>
   <% end %>
+  </div>
