@@ -3,6 +3,9 @@
   <% @products.each do |product| %>
       <div class="card m-2 p-3">
         <!--img src="..." class="card-img-top" alt="..." -->
+        <% if product.photo.present? %>
+          <%= cl_image_tag product.photo.key %>
+        <% end %>
         <h2> <%= link_to product.name, product_path(product), class: "card-title" %> <br><span class="fs-6 text-muted text-decoration-none lh-3"><%= product.units %> unidades disponíveis</span></h2>
         <p> <%= product.description %> </p>
         <%= link_to "BUY", product_orders_path(product), data:{turbo_method: :post}, class: "btn btn-primary align-self-start"%>
