@@ -3,8 +3,9 @@
   grid-template-columns: repeat(3, 1fr);
 
   .card {
-    box-shadow: 2px 2px 8px #333;
+    box-shadow: 2px 2px 8px hsla(0, 0%, 20%, 0.342);
     background-color: #EED28B;
+    border-radius: 12px;
     padding: 0;
 
     .card-header {
@@ -15,6 +16,46 @@
         width: 100%;
         object-fit: cover;
         margin: 0;
+        border-radius: 12px 12px 0 0;
+      }
+    }
+    .card-body {
+
+      h2{
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+    .card-footer {
+      position: relative;
+      padding: 15px 0;
+
+      a {
+        position: absolute;
+        top: -23px;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        border: none;
+        font-family: FontAwesome;
+        font-size: 30px;
+        color:#2e2e2e;
+
+        &:last-child {
+          right: 50px;
+          color:#2e2e2e;
+        }
+
+        &:first-child {
+          right: 10px;
+          color:#2e2e2e;
+        }
+
+        i {
+          margin: 0;
+        }
       }
     }
 
