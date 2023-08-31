@@ -33,7 +33,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     @product.owner = current_user
     if @product.save
-      #redirect_to user_products_path, notice: 'Product was successfully created.'
+      redirect_to my_products_products_path, notice: 'Product was successfully created.'
     else
       render :new, notice: "Sorry. The product couldn't be created."
     end
