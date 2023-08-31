@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   root to: "products#index"
 
   resources :products do
-    get "user", on: :collection
+    collection do
+      get "my_products"
+    end
+
     resources :orders, only: [:new, :create]
     get '/order_confirmation', to: 'orders#order_confirmation', as: :order_confirmation
   end

@@ -1,0 +1,10 @@
+<h1>My products</h1>
+<% @produts.each do |product| %>
+    <p>Name: <%= product.name %></p>
+    <p>Description: <%= product.description %></p>
+    <p>Units: <%= product.units %></p>
+    <p>Price: $<%= product.price %></p>
+
+    <%= link_to "Delete", product_path(product), data: { turbo_confirm: "Tem certeza que deseja excluir ?", turbo_method: :delete }, class: "btn btn-danger" %>
+    <%= link_to "Update", edit_product_path(product), data: { turbo_confirm: "Tem certeza que deseja atualizar ?" }, class: "btn btn-primary" %>
+  <% end %>
