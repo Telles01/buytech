@@ -1,7 +1,64 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<%# <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
   <div class="container">
     <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
     <p>Change your life and learn to code at one of our campuses around the world.</p>
     <a class="btn btn-gradient" href="#">Apply now</a>
   </div>
 </div>
+ %>
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= image_tag "tech.jpg" %>
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Your gear and gadgets are piling up?</h1>
+            <p class="cl-blue3">Starting selling your goods!</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <%= image_tag "setup.jpg" %>
+        <div class="container">
+          <div class="carousel-caption pix-tech">
+            <h1>Top tech on a budget?</h1>
+            <p class="cl-blue3">Maybe someone is letting go of your next upgrade.</p>
+            <!-- p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p -->
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+
+        <%= image_tag "disposal.jpg" %>
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Be responsible when disposing of your tech equipment.</h1>
+            <p class="cl-blue3">By responsibly disposing of tech equipment, we can reduce the amount of e-waste generated every year, which is estimated to be around 50 million tons</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</main>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
