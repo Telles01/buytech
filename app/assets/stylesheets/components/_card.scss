@@ -1,88 +1,74 @@
 .card-grid {
   display:grid;
   grid-template-columns: repeat(3, 1fr);
+}
+.card {
+  box-shadow: 2px 2px 8px hsla(0, 0%, 20%, 0.342);
+  background-color: #ede3ca;
+  border-radius: 12px;
+  padding: 0;
 
-  .card {
-    box-shadow: 2px 2px 8px hsla(0, 0%, 20%, 0.342);
-    background-color: #EED28B;
-    border-radius: 12px;
+  .card-header {
     padding: 0;
 
-    h1, h2, h3, h4, h5, h6 {
-      color: $my-title;
+    img {
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+      margin: 0;
+      border-radius: 12px 12px 0 0;
     }
+  }
+  .card-body {
 
-    .card-header {
-      padding: 0;
-
-      img {
-        height: 250px;
-        width: 100%;
-        object-fit: cover;
-        margin: 0;
-        border-radius: 12px 12px 0 0;
-      }
-    }
-    .card-body {
-
-      h2{
-
-        a {
-          text-decoration: none;
-        }
-      }
-    }
-    .card-footer {
-      position: relative;
-      padding: 15px 0;
+    h2{
 
       a {
-        position: absolute;
-        top: -28px;
-        height: 53px;
-        width: 53px;
-        font-family: FontAwesome;
-        font-size: 30px;
-        color:$my-title;
-        border: solid 1px transparent;
-        border-radius: 50%;
-        padding: 4px 0 0 11px;
-        transition-duration: 700ms;
-
-        &.btn-buy {
-          padding: 5px 0 0 10px;
-        }
-
-        &:last-child {
-          right: 70px;
-        }
-
-        &:first-child {
-          right: 10px;
-        }
-
-        &:hover {
-          border: solid 1px #bda76f;
-          background-color: #EED28B;
-          box-shadow:inset 2px 2px 5px 1px rgba(23,23,23,0.3);
-          transition-duration: 300ms;
-        }
-
-        i {
-          margin: 0;
-        }
+        text-decoration: none;
       }
     }
-
-
   }
+  .card-footer {
+    position: relative;
+    padding: 15px 0;
+
+    a {
+      position: absolute;
+      top: -28px;
+      height: 53px;
+      width: 53px;
+      font-family: FontAwesome;
+      font-size: 30px;
+      color:$my-title;
+      border: solid 1px transparent;
+      border-radius: 50%;
+      padding: 4px 0 0 11px;
+      transition-duration: 700ms;
+
+      &.btn-buy {
+        padding: 5px 0 0 10px;
+      }
+
+      &:last-child {
+        right: 70px;
+      }
+
+      &:first-child {
+        right: 10px;
+      }
+
+      &:hover {
+        border: solid 1px #bda76f;
+        background-color: #EED28B;
+        box-shadow:inset 2px 2px 5px 1px rgba(23,23,23,0.3);
+        transition-duration: 300ms;
+      }
+
+      i {
+        margin: 0;
+      }
+    }
+  }
+
+
 }
-
-// Teria que ser dentro ou fora
-//.card-sign{
-  //box-shadow: 2px 2px 8px hsla(0, 0%, 20%, 0.342);
- // background-color: #EED28B;
- // border-radius: 12px;
-//  padding: 0;
-
-//}
