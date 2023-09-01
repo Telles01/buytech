@@ -17,7 +17,8 @@
       <p>Description: <%= order.product.description %></p>
       <h5 class="align-self-end"> R$ <%= order.product.price %> </h5>
     </div>
-<div class="card-footer">
+    <div class="card-footer m-2">
+    <%= "Seller: #{order.product.owner.name}" %>
     <%= link_to order_path(order), data: { turbo_confirm: "Tem certeza que CANCELAR sua ORDEM ?", turbo_method: :delete } do %>
       <i class="fa-solid fa-circle-xmark"></i>
     <% end %>
