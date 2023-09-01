@@ -15,5 +15,6 @@ Rails.application.routes.draw do
     resources :orders, only: [:new, :create]
     get '/order_confirmation', to: 'orders#order_confirmation', as: :order_confirmation
     get '/order_no_buy', to: 'orders#order_no_buy', as: :order_no_buy
+    get '/my_orders', to: 'orders#my_orders', as: :my_orders
   end
 end
