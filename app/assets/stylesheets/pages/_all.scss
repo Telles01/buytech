@@ -35,11 +35,6 @@
   color: #FB8500;
 }
 
-/* NAVBAR */
-.navbar-lewagon {
-  margin-bottom: 50px;
-}
-
 /* HEADLINES */
 h1, h2, h3, h4, h5, h6 {
   color: $my-title;
@@ -50,4 +45,11 @@ h1 {
 }
 h2 {
   border-left: solid 5px #FFB703;
+}
+.was-validated .form-control:valid, .form-control.is-valid {
+  border-color: #023047;
+}
+.btn-primary {
+  --bs-btn-color: #FFB703;
+  --bs-btn-bg: #023047;
 }
