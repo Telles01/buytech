@@ -46,3 +46,10 @@ h1 {
 h2 {
   border-left: solid 5px #FFB703;
 }
+.was-validated .form-control:valid, .form-control.is-valid {
+  border-color: #023047;
+}
+.btn-primary {
+  --bs-btn-color: #FFB703;
+  --bs-btn-bg: #023047;
+}
