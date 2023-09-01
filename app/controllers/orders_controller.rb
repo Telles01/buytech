@@ -12,6 +12,18 @@ class OrdersController < ApplicationController
     # redirect_to order_confirmation_path(@product)
   end
 
+    def my_orders
+      # @my_orders = current_user.orders
+      @my_orders = Order.where(buyer_id: current_user)
+
+    end
+
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+    redirect_to my_orders_path, notice: "Order successfully canceled."
+  end
+
   def create
     @order = Order.new
     @order.buyer = current_user
