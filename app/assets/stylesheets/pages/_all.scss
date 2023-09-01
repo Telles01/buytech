@@ -1,9 +1,12 @@
-/* PALETTE COLORS */
+/* PALETTE COLORS - BACKGROUND */
 .bg-blue1 {
   background-color: #8ECAE6;
 }
 .bg-blue2 {
   background-color: #219EBC;
+  &:hover {
+    background-color: #FFB703;
+  }
 }
 .bg-blue3 {
   background-color: #023047;
@@ -15,6 +18,7 @@
   background-color: #FB8500;
 }
 
+/* PALETTE COLORS - FOREGROUND */
 .cl-blue1 {
   color: #8ECAE6;
 }
@@ -25,13 +29,27 @@
   color: #023047;
 }
 .cl-yellow1 {
-  bcolor: #FFB703;
+  color: #FFB703;
 }
 .cl-orange1 {
   color: #FB8500;
 }
 
-/* NAVBAR */
-.navbar-lewagon {
-  margin-bottom: 50px;
+/* HEADLINES */
+h1, h2, h3, h4, h5, h6 {
+  color: $my-title;
+  padding-left: 8px;
+}
+h1 {
+  border-left: solid 10px #FB8500;
+}
+h2 {
+  border-left: solid 5px #FFB703;
+}
+.was-validated .form-control:valid, .form-control.is-valid {
+  border-color: #023047;
+}
+.btn-primary {
+  --bs-btn-color: #FFB703;
+  --bs-btn-bg: #023047;
 }

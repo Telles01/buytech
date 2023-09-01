@@ -11,7 +11,7 @@
         <% end %>
         </div>
         <div class="card-body">
-        <h2> <%= link_to product.name, product_path(product), class: "card-title" %> <br><span class="fs-6 text-muted text-decoration-none lh-3"><%= product.units %> available</span></h2>
+        <h2> <%= link_to product.name, product_path(product), class: "card-title" %> <span class="fs-6 text-muted text-decoration-none lh-3"><%= product.units %> available</span></h2>
         <p> <%= product.description %> </p>
         <h5 class="align-self-end"> R$ <%= product.price %> </h5>
         </div>
