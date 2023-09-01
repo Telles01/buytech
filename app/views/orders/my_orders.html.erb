@@ -1,1 +1,28 @@
 <h1>My orders</h1>
+
+<div class="card-grid w-100">
+<% @my_orders.each do |order| %>
+<div class="card m-2">
+    <div class="card-header">
+      <% if order.product.photo.present? %>
+        <%= cl_image_tag order.product.photo.key  %>
+      <% else %>
+        <%= image_tag("placeholder.png") %>
+      <% end %>
+    </div>
+    <div class="card-body">
+      <h2>
+      <%= order.product.name %>
+      </h2>
+      <p>Description: <%= order.product.description %></p>
+      <h5 class="align-self-end"> R$ <%= order.product.price %> </h5>
+    </div>
+<div class="card-footer">
+    <%= link_to order_path(order), data: { turbo_confirm: "Tem certeza que CANCELAR sua ORDEM ?", turbo_method: :delete } do %>
+      <i class="fa-solid fa-circle-xmark"></i>
+    <% end %>
+
+    </div>
+    </div>
+  <% end %>
+  </div>
